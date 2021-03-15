@@ -8,23 +8,23 @@ use NotaFiscalSP\Services\NftsService;
 use NotaFiscalSP\Validators\BaseInformationValidator;
 
 /**
- * Class NotaFiscalSP
- * @package NotaFiscalSP
+ * Class NotaFiscalBH
+ * @package NotaFiscalBH
  */
-class NotaFiscalSP
+class NotaFiscalBH
 {
     private $baseInformation;
     private $nfService;
     private $nftsService;
 
-    public function __construct(array $options)
+    public function __construct(array $options, $isHomologation)
     {
         // Validate Params
         BaseInformationValidator::basic($options);
         $this->baseInformation = BaseEntitiesBuilder::makeBaseInformation($options);
 
-        $this->nfService = new NfService;
-        $this->nftsService = new NftsService;
+        $this->nfService = new NfService($isHomologation);
+        $this->nftsService = new NftsService($isHomologation);
 
         // Case 'IM' not Defined, get from API
         if (!$this->baseInformation->getIm())

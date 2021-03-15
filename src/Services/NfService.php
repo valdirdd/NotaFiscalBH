@@ -35,10 +35,10 @@ class NfService
     private $nfEndPoint;
     private $nfAsyncEndPoint;
 
-    public function __construct()
+    public function __construct($isHomologation = false)
     {
-        $this->nfEndPoint = WsdlBuilder::make(Endpoints::NF);
-        $this->nfAsyncEndPoint = WsdlBuilder::make(Endpoints::NF_ASYNC);
+        $this->nfEndPoint = WsdlBuilder::make($isHomologation ? Endpoints::HOMOLOGATION_NF : Endpoints::NF);
+        $this->nfAsyncEndPoint = WsdlBuilder::make($isHomologation ? Endpoints::HOMOLOGATION_NF_ASYNC : Endpoints::NF_ASYNC);
         $this->response = new BasicTransformerResponse();
     }
 

@@ -1,6 +1,6 @@
 {
-    "name": "kaleu62/notafiscalsp",
-    "description": "Integração com o WebService da Prefeitura de São Paulo para emissão de NFS e NTFS utilizando a API da nota do milhão",
+    "name": "valdir/notafiscalbh",
+    "description": "Integração com o WebService da Prefeitura de Belo Horizonte para emissão de NFS e NTFS utilizando a API da nota do milhão",
     "type": "library",
     "license": "MIT",
     "require": {

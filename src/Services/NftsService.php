@@ -26,9 +26,9 @@ class NftsService
     public $response;
     private $endPoint;
 
-    public function __construct()
+    public function __construct($isHomologation = false)
     {
-        $this->endPoint = WsdlBuilder::make(Endpoints::NFTS);;
+        $this->endPoint = WsdlBuilder::make($isHomologation ? Endpoints::HOMOLOGATION_NFTS : Endpoints::NFTS);;
         $this->response = new BasicTransformerResponse();
     }
 

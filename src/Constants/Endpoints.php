@@ -4,7 +4,11 @@ namespace NotaFiscalSP\Constants;
 
 class Endpoints
 {
-    const NF = 'https://nfe.prefeitura.sp.gov.br/ws/lotenfe.asmx';
-    const NF_ASYNC = 'https://nfews.prefeitura.sp.gov.br/lotenfeasync.asmx';
-    const NFTS = 'https://nfe.prefeitura.sp.gov.br/ws/LoteNFTS.asmx';
+    const NF = 'https://bhissdigital.pbh.gov.br/bhiss-ws/nfse?wsdl';
+    const NF_ASYNC = 'https://bhissdigital.pbh.gov.br/bhiss-ws/nfse?wsdl';
+    const NFTS = 'https://bhissdigital.pbh.gov.br/bhiss-ws/nfse?wsdl';
+
+    const HOMOLOGATION_NF = 'https://bhisshomologa.pbh.gov.br/bhiss-ws/nfse?wsdl';
+    const HOMOLOGATION_NF_ASYNC = 'https://bhisshomologa.pbh.gov.br/bhiss-ws/nfse?wsdl';
+    const HOMOLOGATION_NFTS = 'https://bhisshomologa.pbh.gov.br/bhiss-ws/nfse?wsdl';
 }
